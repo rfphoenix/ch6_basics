@@ -35,7 +35,15 @@ class _HomeState extends State<Home> {
             ),
             preferredSize: Size.fromHeight(75.0)),
       ),
-      body: Container(),
+      body: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: SafeArea(
+            child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[],
+          ),
+        )),
+      ),
     );
   }
 }
