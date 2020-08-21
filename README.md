@@ -1,6 +1,6 @@
-# starter_project
+# Beginning Flutter Chapter 6 project
 
-A new Flutter project.
+Chapter 6 projects.
 
 ## Getting Started
 
