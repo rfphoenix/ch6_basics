@@ -21,7 +21,30 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
       children: <Widget>[
         Container(
           height: 100.0,
-          child: ColumnAndRowNestingWidget(),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(100.0),
+              bottomRight: Radius.circular(10.0),
+            ),
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                Colors.white,
+                Colors.lightGreen.shade500,
+              ],
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey,
+                blurRadius: 10.0,
+                offset: Offset(0.0, 10.0),
+              ),
+            ],
+          ),
+          child: Center(
+            child: TextWidgetRichText(),
+          ),
         ),
       ],
     );
@@ -108,7 +131,20 @@ class _HomeState extends State<Home> {
           child: Column(
             children: <Widget>[
               const ContainerWithBoxDecorationWidget(),
+              Divider(),
+              ColumnWidget(),
+              Divider(),
+              RowWidget(),
+              Divider(),
+              const ColumnAndRowNestingWidget(),
+              Divider(),
               const FlatButtonWidget(),
+              Divider(),
+              const RaiseButtonWidget(),
+              Divider(),
+              const IconButtonWidget(),
+              Divider(),
+              const ButtonBarWidget(),
             ],
           ),
         )),

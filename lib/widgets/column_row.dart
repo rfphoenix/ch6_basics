@@ -31,13 +31,7 @@ class RowWidget extends StatelessWidget {
       mainAxisSize: MainAxisSize.max,
       children: <Widget>[
         Text('Row 1'),
-        Padding(
-          padding: EdgeInsets.all(16.0),
-        ),
         Text('Row 2'),
-        Padding(
-          padding: EdgeInsets.all(16.0),
-        ),
         Text('Row 3'),
       ],
     );

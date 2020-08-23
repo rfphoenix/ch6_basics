@@ -24,7 +24,7 @@ class PopupMenuButtonWidget extends StatelessWidget
         child: PopupMenuButton<TodoMenuItem>(
           icon: Icon(Icons.view_list),
           onSelected: ((valueSelected) {
-            print('valueSelected: $valueSelected.title');
+            print('valueSelected: ${valueSelected.title}');
           }),
           itemBuilder: (BuildContext context) {
             return foodMenuList.map((TodoMenuItem todoMenuItem) {
