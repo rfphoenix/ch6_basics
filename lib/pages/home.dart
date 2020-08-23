@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:starter_project/widgets/column_row.dart';
+import 'package:starter_project/widgets/popupmenu.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -97,16 +98,7 @@ class _HomeState extends State<Home> {
           size: 75.0,
           color: Colors.white70,
         )),
-        bottom: PreferredSize(
-            child: Container(
-              color: Colors.lightGreen.shade100,
-              height: 75.0,
-              width: double.infinity,
-              child: Center(
-                child: Text('Bottom'),
-              ),
-            ),
-            preferredSize: Size.fromHeight(75.0)),
+        bottom: PopupMenuButtonWidget(),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
