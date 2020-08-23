@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:starter_project/widgets/column_row.dart';
+import 'package:starter_project/widgets/buttons.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -115,9 +116,30 @@ class _HomeState extends State<Home> {
           child: Column(
             children: <Widget>[
               const ContainerWithBoxDecorationWidget(),
+              const FlatButtonWidget(),
             ],
           ),
         )),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.play_arrow),
+        backgroundColor: Colors.lightGreen.shade100,
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.lightGreen.shade100,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Icon(Icons.pause),
+            Icon(Icons.stop),
+            Icon(Icons.access_time),
+            Padding(
+              padding: EdgeInsets.all(32.0),
+            ),
+          ],
+        ),
       ),
     );
   }
